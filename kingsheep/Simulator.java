@@ -13,7 +13,7 @@ public class Simulator {
     /** Font size used for the top-window text. */
     private static final int FONTSIZE = 14;
 
-    /** Maximum number of seconds a player is allowed to think. */
+    /** Maximum number of nanoseconds a player is allowed to think. */
     private static final int THINKLIMIT = 1000;
 
     /** Minimum time to wait between player turns (even if a player used
