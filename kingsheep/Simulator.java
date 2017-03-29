@@ -363,7 +363,7 @@ public class Simulator {
         else if (!p[1].sheep.alive && playerWon == 0) {
 //            if (p[1].score < p[0].score) {
                 p[0].score += p[1].score;
-                p[1].score = 1;
+                p[1].score = 0;
                 playerWon = 1;
 //            }
 //            else {
