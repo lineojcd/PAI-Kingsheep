@@ -350,11 +350,22 @@ public class Simulator {
         else if (map[c.y][c.x] == Type.WOLF1 && c.type == Type.SHEEP2)
             p[1].sheep.alive = false;
 
-        if (!p[0].sheep.alive && playerWon == 0 && p[0].score < p[1].score)
-            playerWon = 2;
-        else if (!p[1].sheep.alive && playerWon == 0
-                 && p[1].score < p[0].score)
-            playerWon = 1;
+        if (!p[0].sheep.alive && playerWon == 0) {
+            if (p[0].score < p[1].score) {
+                playerWon = 2;
+            }
+            else {
+                playerWon = 1;
+            }
+        }
+        else if (!p[1].sheep.alive && playerWon == 0) {
+            if (p[1].score < p[0].score) {
+                playerWon = 1;
+            }
+            else {
+                playerWon = 2;
+            }
+        }
 
         map[c.y][c.x] = c.type;
     }
